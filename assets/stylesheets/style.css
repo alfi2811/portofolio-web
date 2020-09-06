@@ -20,8 +20,9 @@ body {
 
 nav {    
     position: fixed;
-    width: 100%;
-    background-color: black;
+    width: 100%;    
+    z-index: 10;
+    /* background-color: black; */
 }
 
 nav ul {
@@ -32,11 +33,12 @@ nav ul {
     padding: 0;
     text-align: right;
     margin: 0;
-    transition: 1s;
+    transition: 1s ease-in-out;
 }
 
 nav.grey ul {
-    background: #728196;
+    background: black;
+    /* background: #728196; */
 }
 
 nav ul li {
@@ -52,7 +54,7 @@ nav ul li a {
 
 .icon-menu {
     width: 100%;    
-    background: #728196;
+    background: black;
     text-align: right;
     box-sizing: border-box;
     padding: 15px 24px;
@@ -66,10 +68,51 @@ nav ul li a {
     display: none;
 }
 
+@media(max-width: 768px){
+    nav ul li {
+        padding: 20px 10px;
+    }
+}
+
+@media(max-width: 710px){
+    .hero-detail {
+        margin-top: 4em;
+    }
+    .logo {
+        position: fixed;
+        top: 0;
+        margin-top: 16px;
+    }
+
+    nav ul {
+        max-height: 0px;
+        background: black;
+    }
+
+    nav.grey ul {
+        background: black;
+    }
+
+    .showing {
+        max-height: 25em;
+    }
+
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px 0px;
+        text-align: center;
+    }
+
+    .icon-menu {
+        display: block;
+    }
+}
+
 /* main */
 .main-content {
     background-color: #030419;
-    padding: 0px 5%;
+    padding: 0px 7%;
 }
 
 /* hero section */
@@ -79,10 +122,9 @@ nav ul li a {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: center;
-    color: white;    
-    min-height: 100vh;
+    color: white;        
     grid-auto-flow: dense;
-    padding-bottom: 10%;
+    padding-bottom: 5%;
 }
 
 .hero-desc {
@@ -97,6 +139,15 @@ nav ul li a {
     justify-content: center;    
     grid-row: 1;  
     grid-column: 2;
+}
+
+.hero-desc .greeting {
+    position: relative;
+}
+.hero-desc .greeting img {
+    position: absolute;
+    top: -43px;
+    left: -32px;
 }
 
 .hero-desc .greeting h2, .hero-desc .greeting h1, .hero-desc .greeting p {
@@ -139,6 +190,10 @@ nav ul li a {
     border-radius: 10px;
     color: white;   
     margin-right: 6%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
 }
 .hero-desc .contact .email a {
     margin-top: 10px;
@@ -183,12 +238,68 @@ nav ul li a {
     }
     .hero-desc .contact .email button {
         width: 50%;
-    }
+    }    
     .hero-desc .contact .email a {
         text-align: left;
+    }
+    .hero-desc .contact .social-media {
+        margin-top: 1em;
     }
     .hero-desc .greeting h1 {
         font-size: 44px;
         width: 100%;
+    }
+}
+
+/* project-sec */
+
+.project-title {
+    color: white;
+    font-size: 46px;
+    font-weight: bold;
+}
+
+.project-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3em;
+    padding-bottom: 3em;
+}
+
+.project-group .card-project .project-desc {
+    color: white;
+}
+
+.project-group .card-project .project-desc h1 {
+    font-size: 30px;
+    margin: 5px 0px 0px;    
+}
+
+.project-group .card-project .project-desc p {
+    text-align: justify;    
+}
+
+.project-group .card-project .project-desc a {
+    text-decoration: none;
+    color: white;
+}
+
+.project-group .card-project .project-desc .link {    
+    display: flex;
+    gap: .5em;
+    align-items: center;
+}
+.project-group .card-project .project-desc .label {
+    background-color: #00A3FF;
+    display: flex;    
+    gap: 5px;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+@media(max-width: 425px) {
+    .project-group {
+        grid-template-columns: 1fr;
     }
 }
