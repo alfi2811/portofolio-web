@@ -387,6 +387,12 @@ nav ul li a {
         margin-top: 10px;
         grid-template-columns: 1fr;
     }
+    .cta-desc .cta-link a:first-child {        
+        padding: 2% 6%;  
+    }
+    .cta-desc .cta-link a:last-child {        
+        padding: 2% 8%;  
+    }
 }
 
 @media(max-width: 425px) {
@@ -398,6 +404,13 @@ nav ul li a {
 
     .cta-desc {
         padding: 5% 8%;
+    }
+
+    .cta-desc .cta-link a:last-child {        
+        padding: 3.8% 9%;  
+    }
+    .cta-desc .cta-link a:first-child {        
+        padding: 3% 6%;  
     }
 }
 
