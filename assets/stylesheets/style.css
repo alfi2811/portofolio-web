@@ -422,10 +422,21 @@ nav ul li a {
 
 .skill-img {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
 }
 .skill-img img {
     margin-top: 5%;
+}
+
+@media(max-width: 768px) {
+    .skill-img {        
+        grid-template-columns: 1fr 1fr ;        
+    }
+}
+@media(max-width: 425px) {
+    .skill-img {        
+        grid-template-columns: 1fr;        
+    }
 }
