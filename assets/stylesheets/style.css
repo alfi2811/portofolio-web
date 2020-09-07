@@ -23,6 +23,7 @@ nav {
     width: 100%;    
     z-index: 10;
     /* background-color: black; */
+    
 }
 
 nav ul {
@@ -111,7 +112,10 @@ nav ul li a {
 
 /* main */
 .main-content {
-    background-color: #030419;
+    background-color: #030419;    
+}
+
+.hero-sec, .project-sec {
     padding: 0px 7%;
 }
 
@@ -158,12 +162,17 @@ nav ul li a {
 }
 
 .hero-desc .greeting h2 {
+    font-family: 'Kanit', sans-serif;
     color: #00A3FF;    
+
     font-size: 36px;
 }
 .hero-desc .greeting h1 {
+    font-family: 'Kanit', sans-serif;
     font-size: 44px;
     width: 460px;
+    line-height: 50px;
+    font-weight: 600;
 }
 .hero-desc .greeting p {
     font-size: 16px;
@@ -179,7 +188,7 @@ nav ul li a {
 .hero-desc .contact .email {     
     flex: 1;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;        
 }
 
 .hero-desc .contact .email button {
@@ -194,6 +203,8 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     gap: 0.5em;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
 }
 .hero-desc .contact .email a {
     margin-top: 10px;
@@ -251,19 +262,22 @@ nav ul li a {
     }
 }
 
+/* end hero section */
+
 /* project-sec */
 
 .project-title {
     color: white;
     font-size: 46px;
     font-weight: bold;
+    font-family: 'Kanit', sans-serif;
 }
 
 .project-group {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 3em;
-    padding-bottom: 3em;
+    padding-bottom: 4em;
 }
 
 .project-group .card-project .project-desc {
@@ -272,11 +286,13 @@ nav ul li a {
 
 .project-group .card-project .project-desc h1 {
     font-size: 30px;
-    margin: 5px 0px 0px;    
+    margin: 5px 0px 0px;   
+    font-family: 'Kanit', sans-serif;
 }
 
 .project-group .card-project .project-desc p {
     text-align: justify;    
+    
 }
 
 .project-group .card-project .project-desc a {
@@ -302,4 +318,114 @@ nav ul li a {
     .project-group {
         grid-template-columns: 1fr;
     }
+}
+
+/* end project section */
+
+/* cta section */
+
+.cta-sec {
+    font-family: 'Kanit', sans-serif;
+    background: url('../images/cta.svg') no-repeat ;
+    background-size: cover;
+    padding: 0px;
+    width: 100%;
+}
+
+.card-cta {     
+    padding: 7%;    
+}
+
+.cta-desc {  
+    display: grid;    
+    grid-template-columns: 1.2fr 1fr; 
+    align-items: center;      
+    background-color: #0D0E28;    
+    padding: 5% 5%;    
+}
+
+.cta-desc p {
+    color: white;
+    font-size: 30px;
+    margin: 0;
+}
+
+.cta-desc .cta-link, .cta-desc .cta-link a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;    
+    justify-content: flex-end;
+}
+
+.cta-desc .cta-link {    
+    gap: 5%;
+}
+
+.cta-desc .cta-link a {    
+    border-radius: 10px;    
+    font-weight: 600;
+}
+
+.cta-desc .cta-link a:first-child {
+    background-color: #030419;  
+    padding: 2.5% 6.5%;  
+}
+.cta-desc .cta-link a:last-child {
+    background-color: #00A3FF;    
+    padding: 2.8% 8%;  
+}
+
+@media(max-width: 768px) {
+    .cta-desc .cta-link{
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+
+    .cta-desc  {
+        justify-content: flex-start;
+        margin-top: 10px;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 425px) {
+    .cta-desc .cta-link{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1em;
+    }
+
+    .cta-desc {
+        padding: 5% 8%;
+    }
+}
+
+/* end cta session */
+
+/* skill session */
+
+.skill-sec {
+    background-color: #0D0E28;
+    font-family: 'Kanit', sans-serif;
+    padding-bottom: 5em;
+}
+
+.skill-title p {
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    padding: 4% 0px;
+}
+
+.skill-img {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    align-items: center;
+    justify-items: center;
+}
+.skill-img img {
+    margin-top: 5%;
 }
