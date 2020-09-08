@@ -439,12 +439,12 @@ nav ul li a {
 
 .skill-img {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr);
     align-items: center;
     justify-items: center;
 }
 .skill-img img {
-    margin-top: 5%;
+    margin-top: 8%;
 }
 
 .float-overflow {
@@ -467,6 +467,13 @@ nav ul li a {
     -webkit-text-stroke-color: black;
 }
 
+@media(max-width: 1024px) {
+    .skill-img {        
+        grid-template-columns: repeat(3, 1fr);
+        
+    }  
+    
+}
 @media(max-width: 768px) {
     .skill-img {        
         grid-template-columns: 1fr 1fr ;        
