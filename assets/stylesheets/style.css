@@ -112,7 +112,8 @@ nav ul li a {
 
 /* main */
 .main-content {
-    background-color: #030419;    
+    background-color: #030419;   
+    overflow: hidden; 
 }
 
 .hero-sec, .project-sec {
@@ -342,6 +343,7 @@ nav ul li a {
     align-items: center;      
     background-color: #0D0E28;    
     padding: 5% 5%;    
+    z-index: 2;
 }
 
 .cta-desc p {
@@ -360,6 +362,7 @@ nav ul li a {
 
 .cta-desc .cta-link {    
     gap: 5%;
+    z-index: 2;
 }
 
 .cta-desc .cta-link a {    
@@ -422,6 +425,7 @@ nav ul li a {
     background-color: #0D0E28;
     font-family: 'Kanit', sans-serif;
     padding-bottom: 5em;
+    position: relative;
 }
 
 .skill-title p {
@@ -430,7 +434,7 @@ nav ul li a {
     font-size: 30px;
     font-weight: 600;
     color: white;
-    padding: 4% 0px;
+    padding: 2em 0px 4%;
 }
 
 .skill-img {
@@ -443,13 +447,87 @@ nav ul li a {
     margin-top: 5%;
 }
 
+.float-overflow {
+    overflow: hidden;
+    position: absolute;
+    top: -2%;  
+    left: 52%; 
+    transform: translate(-50%, -50%);       
+}
+
+.float-text {        
+    margin: 0;    
+    font-family: 'Kanit', sans-serif;
+    font-size: 140px;
+    line-height: 209px;
+    letter-spacing: 0.4em;
+    color: black;
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
 @media(max-width: 768px) {
     .skill-img {        
         grid-template-columns: 1fr 1fr ;        
-    }
+    }    
 }
 @media(max-width: 425px) {
     .skill-img {        
         grid-template-columns: 1fr;        
+    }    
+}
+
+/* end skill section */
+
+/* footer section */
+
+.footer-sec {    
+    background: url('../images/footer.png') ,#030419;    
+    background-position: right bottom, center;
+    background-repeat: no-repeat, no-repeat;    
+    
+    padding-top: 5em;
+}
+
+.footer-sec p, .footer-sec h1 {
+    margin: 0;
+    color: white;
+}
+
+.contact-sec, .copyright-sec {
+    padding: 0px 7%;    
+}
+
+.contact-us h1{
+    font-weight: 600;
+    font-family: 'Kanit', sans-serif;
+    font-size: 30px;
+    line-height: 45px;
+    margin-bottom: 10px;    
+}
+.contact-us p {    
+    line-height: 25px;
+}
+
+.contact-sec .social-media {
+    margin-top: 20px;
+    margin-bottom: 10em;
+}
+
+.contact-sec .social-media img {
+    margin-right: 3%;
+}
+
+.copyright-sec {
+    padding-bottom: 1em;
+}
+
+@media(max-width: 425px) {
+    .footer-sec {
+        background-size: 300px, cover;
+    }
+    .contact-sec .social-media img {
+        margin-right: 5%;
     }
 }
