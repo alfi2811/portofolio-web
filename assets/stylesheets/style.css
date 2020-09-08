@@ -315,10 +315,19 @@ nav ul li a {
     font-weight: bold;
 }
 
+@media(max-width: 768px) {
+    .project-group .card-project .project-desc .link {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1em;
+    }
+    
+}
 @media(max-width: 425px) {
     .project-group {
         grid-template-columns: 1fr;
     }
+    
 }
 
 /* end project section */
