@@ -32,6 +32,7 @@ nav ul {
     overflow: hidden;
     color: #fff;    
     padding: 0;
+    padding-right: 1.5em;
     text-align: right;
     margin: 0;
     transition: 1s ease-in-out;
@@ -65,6 +66,10 @@ nav ul li a {
     transition: 1s;
 }
 
+.bg-biru {
+    background-color: #00A3FF;
+}
+
 #closeIcon {
     display: none;
 }
@@ -75,7 +80,7 @@ nav ul li a {
     }
 }
 
-@media(max-width: 710px){
+@media(max-width: 425px){
     .hero-detail {
         margin-top: 4em;
     }
@@ -88,6 +93,7 @@ nav ul li a {
     nav ul {
         max-height: 0px;
         background: black;
+        padding-right: 0;
     }
 
     nav.grey ul {
@@ -116,7 +122,7 @@ nav ul li a {
     overflow: hidden; 
 }
 
-.hero-sec, .project-sec {
+.hero-sec, .project-sec, .why-img {
     padding: 0px 7%;
 }
 
@@ -329,8 +335,69 @@ nav ul li a {
     }
     
 }
-
 /* end project section */
+
+/* why session */
+
+.why-sec {
+    background-color: #0D0E28;
+    font-family: 'Kanit', sans-serif;
+    padding-bottom: 5em;
+    position: relative;
+}
+
+.why-title p {
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    padding: 2em 0px 4%;
+}
+
+.why-img {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);    
+}
+.why-img img {
+    margin: 0 auto;  
+}
+
+.img-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1em;
+}
+
+.img-card p {
+    font-family: 'Kanit', sans-serif;
+    color: white;    
+    font-weight: 600;
+    text-align: center;
+    font-size: 30px;
+    margin: 0px;
+}
+
+@media(max-width: 1024px) {
+    .why-img {        
+        grid-template-columns: repeat(2, 1fr);        
+    }  
+    
+}
+@media(max-width: 768px) {
+    .why-img {        
+        grid-template-columns: 1fr 1fr ;        
+    }    
+}
+@media(max-width: 425px) {
+    .why-img {        
+        grid-template-columns: 1fr;        
+    }    
+}
+
+/* end why section */
 
 /* cta section */
 
@@ -427,6 +494,7 @@ nav ul li a {
 }
 
 /* end cta session */
+
 
 /* skill session */
 
